@@ -18,9 +18,10 @@ public class ChineseEncryptor {
     public static void main(String[] args) throws Exception {
         // 示例密钥（16字节）
         String key = "1234567890abcdef";
-        File inputFile = new File("example.zip");
+        File inputFile = new File("/Users/lynn/Downloads/压缩包/history.zip");
         String encrypted = encryptFile(inputFile, key);
-        System.out.println("加密密文：\n" + encrypted);
+//        System.out.println("加密密文：\n" + encrypted);
+        System.out.println(encrypted.length() / 1024);
         File outputFile = new File("解密恢复_" + inputFile.getName());
         decryptToFile(encrypted, key, outputFile);
         System.out.println("已解密保存为: " + outputFile.getAbsolutePath());
